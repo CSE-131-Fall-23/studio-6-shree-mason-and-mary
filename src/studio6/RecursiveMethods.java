@@ -3,6 +3,8 @@ package studio6;
 import edu.princeton.cs.introcs.StdDraw;
 
 public class RecursiveMethods {
+	
+	
 
 	/**
 	 * Computes the geometric sum for the first n terms in the series
@@ -12,9 +14,18 @@ public class RecursiveMethods {
 	 *         ...)
 	 */
 	public static double geometricSum(int n) {
-		
-			// FIXME compute the geometric sum for the first n terms recursively
+		double startingNum = 1/2;
+		double p = 0;
+		if (n == 0) {
 			return 0;
+		} 
+		else {
+			// p= (1/Math.pow(2, n-1));
+			double m = (1/Math.pow(2, n)) + geometricSum((int) n-1);			
+			return m;
+		}
+			// FIXME compute the geometric sum for the first n terms recursively
+			
 		
 	}
 
